@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Score Board</title>
     <style>
-        b {
-            size: 5rem;
+        #scoreBoard b {
+            font-size: 5rem;
+            margin: 1rem;
+        }
+        #actions button {
+            margin: 1rem;
+        }
+        #teamNames p {
+            margin: 1.5rem;
+            font-size: 3rem;
         }
     </style>
-    <script type="module" src="main.js"></script> 
-  </head>
-  <body>
+    <script type="module" src="main.js"></script>
+</head>
+<body>
     <div id="scoreBoard">
         <b id="homeScore">Home Score</b>
-        <b> - </b>
+        <b>-</b>
         <b id="awayScore">Away Score</b>
     </div>
-  </body>
+    <div id="teamNames">
+        <p id="homeTeam">Home Team</p>
+        <p id="awayTeam">Away Team</p>
+    </div>
+    <div id="actions">
+        <button id="newGame">New Game</button>
+        <button id="homeGoal">Home Team Goal</button>
+        <button id="awayGoal">Visitor Team Goal</button>
+        <button id="endGame">End Game</button>
+    </div>
+</body>
+
 </html>
