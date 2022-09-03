@@ -10,6 +10,14 @@ class Collection {
         this.games.unshift(game);
     }
 
+    getGames() {
+        return this.games;
+    }
+
+    setGames(games) {
+        this.games = games;
+    }
+
     orderCollectionByTotalScore() {
 
         this.games.sort((a, b) => {

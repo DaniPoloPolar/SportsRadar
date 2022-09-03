@@ -36,6 +36,7 @@ btnEndGame.addEventListener("click", () => {
     btnAwayGoal.disabled = true;
     btnEndGame.disabled = true;
 
+    gameCollectionByScore.setGames(gameCollection.getGames());
     gameCollectionByScore.orderCollectionByTotalScore();
 
     gameCollection.buildGameList("gamesByDate");
