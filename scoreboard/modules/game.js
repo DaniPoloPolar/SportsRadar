@@ -1,6 +1,6 @@
 class Game {
 
-    aTeams = ["Spain", "UK", "Italy", "Germany", "France", "Ireland", "USA", "Mexico"];
+    aTeams = ["Spain", "UK", "Italy", "Germany", "France", "Ireland", "USA", "Mexico", "Canada", "Japan", "China", "Russia"];
 
     constructor(homeScore = 0, awayScore = 0, homeTeamName = "", awayTeamName = "",) {
         if (homeTeamName === "" && awayTeamName === "") {
