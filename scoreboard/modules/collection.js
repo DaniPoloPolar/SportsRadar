@@ -7,12 +7,13 @@ class Collection {
     }
 
     addGame(game) {
-        this.games.push(game);
+        this.games.unshift(game);
     }
 
     getCollectionByTotalScore() {
 
-        let sortedCollection = this.games.sort((a, b) => {
+        let sortedCollection = new Collection();
+        sortedCollection.games = this.games.sort((a, b) => {
             if ((a.homeScore + a.awayScore) >= (b.homeScore + b.awayScore)) {
                 return 1;
             }
@@ -27,6 +28,22 @@ class Collection {
 
     getActiveGame() {
         return this.games[0];
+    }
+
+    buildGameList(listId) {
+
+        let list = document.getElementById(listId);
+
+        list.innerHTML = '';
+
+        this.games.forEach((game) => {
+            var sText = game.homeTeamName + ": " + game.homeScore + " - " + game.awayTeamName + ": " + game.awayScore;
+            var oListNode = document.createElement("li");
+            var sNodeText = document.createTextNode(sText);
+            oListNode.appendChild(sNodeText);
+            list.appendChild(oListNode);
+        });
+
     }
 
 }

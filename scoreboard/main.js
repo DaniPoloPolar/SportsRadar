@@ -4,13 +4,17 @@ import { Collection } from "./modules/collection.js";
 let btnNewGame = document.getElementById("newGame");
 let btnHomeGoal = document.getElementById("homeGoal");
 let btnAwayGoal = document.getElementById("awayGoal");
+let btnEndGame = document.getElementById("endGame");
 
 let gameCollection = new Collection;
 
 btnNewGame.addEventListener("click", () => {
-    let newGame = new Game(0,0);
+    let newGame = new Game(0, 0);
     gameCollection.addGame(newGame);
     newGame.create();
+    btnHomeGoal.disabled = false;
+    btnAwayGoal.disabled = false;
+    btnEndGame.disabled = false;
 });
 
 btnHomeGoal.addEventListener("click", () => {
@@ -23,4 +27,15 @@ btnAwayGoal.addEventListener("click", () => {
     activeGame.incrementAwayScore();
 });
 
+btnEndGame.addEventListener("click", () => {
+    
+    btnHomeGoal.disabled = true;
+    btnAwayGoal.disabled = true;
+    btnEndGame.disabled = true;
 
+    let gameCollectionByScore = gameCollection.getCollectionByTotalScore();
+
+    gameCollection.buildGameList("gamesByDate");
+    gameCollectionByScore.buildGameList("gamesByScore");
+    
+});
