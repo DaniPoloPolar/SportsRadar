@@ -30,10 +30,10 @@ class Collection {
     orderCollectionByTotalScore() {
 
         this.games.sort((a, b) => {
-            if ((a.homeScore + a.awayScore) >= (b.homeScore + b.awayScore)) {
+            if ((a.homeScore + a.awayScore) > (b.homeScore + b.awayScore)) {
                 return -1;
             }
-            if ((a.homeScore + a.awayScore) < (b.homeScore + b.awayScore)) {
+            if ((a.homeScore + a.awayScore) <= (b.homeScore + b.awayScore)) {
                 return 1;
             }
         });
