@@ -26,11 +26,11 @@ class Game {
 
     generateTeams() {
 
-        let homeTeamName = aTeams[Math.floor(Math.random() * this.aTeams.length-1)];
-        let awayTeamName = aTeams[Math.floor(Math.random() * this.aTeams.length-1)];
+        let homeTeamName = this.aTeams[Math.floor(Math.random() * this.aTeams.length-1)];
+        let awayTeamName = this.aTeams[Math.floor(Math.random() * this.aTeams.length-1)];
 
         while (homeTeamName === awayTeamName) {
-            awayTeamName = aTeams[Math.floor(Math.random() * this.aTeams.length-1)];
+            awayTeamName = this.aTeams[Math.floor(Math.random() * this.aTeams.length-1)];
         }
 
         return {homeTeamName, awayTeamName}
