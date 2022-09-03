@@ -17,11 +17,11 @@ class Collection {
     copyGames(collection) {
 
         var gamesToCopy = collection.getGames();
-        
+
         this.games = [];
-        
+
         gamesToCopy.forEach((game) => {
-            var copyGame = new Game(game.homeTeamName, game.awayTeamName, game.homeScore, game.awayScore);
+            var copyGame = new Game(game.homeScore, game.awayScore, game.homeTeamName, game.awayTeamName);
             this.games.push(copyGame);
         });
 
