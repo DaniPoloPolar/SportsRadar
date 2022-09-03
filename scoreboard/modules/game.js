@@ -2,7 +2,7 @@ class Game {
 
     aTeams = ["Spain", "UK", "Italy", "Germany", "France", "Ireland", "USA", "Mexico"];
 
-    constructor(homeTeamName = "", awayTeamName = "", homeScore = 0, awayScore = 0) {
+    constructor(homeScore = 0, awayScore = 0, homeTeamName = "", awayTeamName = "",) {
         if (homeTeamName === "" && awayTeamName === "") {
             let teams = this.generateTeams();
             this.homeTeamName = teams.homeTeamName;
