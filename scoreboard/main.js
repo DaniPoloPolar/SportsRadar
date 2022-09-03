@@ -30,7 +30,7 @@ btnAwayGoal.addEventListener("click", () => {
 
 btnEndGame.addEventListener("click", () => {
     
-    btnNewGame.disabled = true;
+    btnNewGame.disabled = false;
     btnHomeGoal.disabled = true;
     btnAwayGoal.disabled = true;
     btnEndGame.disabled = true;
