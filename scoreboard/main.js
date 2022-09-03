@@ -7,6 +7,7 @@ let btnAwayGoal = document.getElementById("awayGoal");
 let btnEndGame = document.getElementById("endGame");
 
 let gameCollection = new Collection;
+let gameCollectionByScore = new Collection;
 
 btnNewGame.addEventListener("click", () => {
     let newGame = new Game(0, 0);
@@ -35,7 +36,7 @@ btnEndGame.addEventListener("click", () => {
     btnAwayGoal.disabled = true;
     btnEndGame.disabled = true;
 
-    let gameCollectionByScore = gameCollection.getCollectionByTotalScore();
+    gameCollectionByScore.getCollectionByTotalScore();
 
     gameCollection.buildGameList("gamesByDate");
     gameCollectionByScore.buildGameList("gamesByScore");

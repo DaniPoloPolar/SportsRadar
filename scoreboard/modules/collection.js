@@ -10,11 +10,9 @@ class Collection {
         this.games.unshift(game);
     }
 
-    getCollectionByTotalScore() {
+    orderCollectionByTotalScore() {
 
-        let sortedCollection = new Collection();
-        sortedCollection.games = this.games;
-        sortedCollection.games.sort((a, b) => {
+        this.games.sort((a, b) => {
             if ((a.homeScore + a.awayScore) >= (b.homeScore + b.awayScore)) {
                 return -1;
             }
@@ -22,8 +20,6 @@ class Collection {
                 return 1;
             }
         });
-
-        return sortedCollection;
 
     }
 
