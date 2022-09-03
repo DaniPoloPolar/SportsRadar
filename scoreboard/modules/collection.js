@@ -13,7 +13,8 @@ class Collection {
     getCollectionByTotalScore() {
 
         let sortedCollection = new Collection();
-        sortedCollection.games = this.games.sort((a, b) => {
+        sortedCollection.games = this.games;
+        sortedCollection.games.sort((a, b) => {
             if ((a.homeScore + a.awayScore) >= (b.homeScore + b.awayScore)) {
                 return -1;
             }
