@@ -2,10 +2,8 @@ import { Game } from "./game.js";
 
 class Collection {
 
-    games = [];
-
     constructor() {
-        this.games = games;
+        this.games = [];
     }
 
     addGame(game) {
