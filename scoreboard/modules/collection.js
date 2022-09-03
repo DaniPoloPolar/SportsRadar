@@ -27,6 +27,10 @@ class Collection {
 
     }
 
+    getActiveGame() {
+        return this.games[0];
+    }
+
 }
 
 export { Collection };

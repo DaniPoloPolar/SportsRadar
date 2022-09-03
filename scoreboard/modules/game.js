@@ -22,15 +22,28 @@ class Game {
         awayScore.innerText = 0;
         homeTeam.innerText = this.homeTeamName;
         awayTeam.innerText = this.awayTeamName;
+
+    }
+
+    incrementHomeScore() {
+        this.homeScore++;
+        let homeScoreText = document.getElementById("homeScore");
+        homeScoreText.innerText = this.homeScore;
+    }
+
+    incrementAwayScore() {
+        this.awayScore++;
+        let awayScoreText = document.getElementById("awayScore");
+        awayScoreText.innerText = this.awayScore;
     }
 
     generateTeams() {
 
-        let homeTeamName = this.aTeams[Math.floor(Math.random() * this.aTeams.length-1)];
-        let awayTeamName = this.aTeams[Math.floor(Math.random() * this.aTeams.length-1)];
+        let homeTeamName = this.aTeams[Math.floor(Math.random() * this.aTeams.length)];
+        let awayTeamName = this.aTeams[Math.floor(Math.random() * this.aTeams.length)];
 
         while (homeTeamName === awayTeamName) {
-            awayTeamName = this.aTeams[Math.floor(Math.random() * this.aTeams.length-1)];
+            awayTeamName = this.aTeams[Math.floor(Math.random() * this.aTeams.length)];
         }
 
         return {homeTeamName, awayTeamName}
