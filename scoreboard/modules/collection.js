@@ -14,8 +14,17 @@ class Collection {
         return this.games;
     }
 
-    setGames(games) {
-        this.games = games;
+    copyGames(collection) {
+
+        var gamesToCopy = collection.getGames();
+        
+        this.games = [];
+        
+        gamesToCopy.forEach((game) => {
+            var copyGame = new Game(game.homeTeamName, game.awayTeamName, game.homeScore, game.awayScore);
+            this.games.push(copyGame);
+        });
+
     }
 
     orderCollectionByTotalScore() {

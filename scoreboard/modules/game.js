@@ -2,11 +2,17 @@ class Game {
 
     aTeams = ["Spain", "UK", "Italy", "Germany", "France", "Ireland", "USA", "Mexico"];
 
-    constructor(homeScore = 0, awayScore = 0) {
-        let teams = this.generateTeams();
+    constructor(homeTeamName = "", awayTeamName = "", homeScore = 0, awayScore = 0) {
+        if (homeTeamName === "" && awayTeamName === "") {
+            let teams = this.generateTeams();
+            this.homeTeamName = teams.homeTeamName;
+            this.awayTeamName = teams.awayTeamName;
+        }
+        else {
+            this.homeTeamName = homeTeamName;
+            this.awayTeamName = awayTeamName;
+        }
 
-        this.homeTeamName = teams.homeTeamName;
-        this.awayTeamName = teams.awayTeamName;
         this.homeScore = homeScore;
         this.awayScore = awayScore;
     }
@@ -25,16 +31,21 @@ class Game {
 
     }
 
-    incrementHomeScore() {
-        this.homeScore++;
-        let homeScoreText = document.getElementById("homeScore");
-        homeScoreText.innerText = this.homeScore;
+    getScore() {
+        return {homeScore: this.homeScore, awayScore: this.awayScore};
     }
 
-    incrementAwayScore() {
-        this.awayScore++;
+    setScore(homeScore, awayScore) {
+
+        this.homeScore = homeScore;
+        this.awayScore = awayScore;
+
+        let homeScoreText = document.getElementById("homeScore");
         let awayScoreText = document.getElementById("awayScore");
+
+        homeScoreText.innerText = this.homeScore;
         awayScoreText.innerText = this.awayScore;
+
     }
 
     generateTeams() {
@@ -46,7 +57,7 @@ class Game {
             awayTeamName = this.aTeams[Math.floor(Math.random() * this.aTeams.length)];
         }
 
-        return {homeTeamName, awayTeamName}
+        return { homeTeamName, awayTeamName }
 
     }
 

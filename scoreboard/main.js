@@ -21,12 +21,14 @@ btnNewGame.addEventListener("click", () => {
 
 btnHomeGoal.addEventListener("click", () => {
     let activeGame = gameCollection.getActiveGame();
-    activeGame.incrementHomeScore();
+    let score = activeGame.getScore();
+    activeGame.setScore(score.homeScore+1, score.awayScore);
 });
 
 btnAwayGoal.addEventListener("click", () => {
     let activeGame = gameCollection.getActiveGame();
-    activeGame.incrementAwayScore();
+    let score = activeGame.getScore();
+    activeGame.setScore(score.homeScore, score.awayScore+1);
 });
 
 btnEndGame.addEventListener("click", () => {
@@ -36,7 +38,7 @@ btnEndGame.addEventListener("click", () => {
     btnAwayGoal.disabled = true;
     btnEndGame.disabled = true;
 
-    gameCollectionByScore.setGames(gameCollection.getGames());
+    gameCollectionByScore.copyGames(gameCollection);
     gameCollectionByScore.orderCollectionByTotalScore();
 
     gameCollection.buildGameList("gamesByDate");
