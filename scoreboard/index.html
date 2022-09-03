@@ -19,6 +19,9 @@
         #lists {
             display: flex;
         }
+        #lists div {
+            width: 45%;
+        }
     </style>
     <script type="module" src="main.js"></script>
 </head>
@@ -40,11 +43,11 @@
         <button id="endGame" disabled>End Game</button>
     </div>
     <div id="lists">
-        <div width="45%">
+        <div>
             <p>Games By Date (Newest to Oldest)</p>
             <ul id="gamesByDate"></ul>
         </div>
-        <div width="45%">
+        <div>
             <p>Games By Total Score (Highest to Lowest)</p>
             <ul id="gamesByScore"></ul>
         </div>

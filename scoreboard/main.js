@@ -22,17 +22,17 @@ btnNewGame.addEventListener("click", () => {
 btnHomeGoal.addEventListener("click", () => {
     let activeGame = gameCollection.getActiveGame();
     let score = activeGame.getScore();
-    activeGame.setScore(score.homeScore+1, score.awayScore);
+    activeGame.setScore(score.homeScore + 1, score.awayScore);
 });
 
 btnAwayGoal.addEventListener("click", () => {
     let activeGame = gameCollection.getActiveGame();
     let score = activeGame.getScore();
-    activeGame.setScore(score.homeScore, score.awayScore+1);
+    activeGame.setScore(score.homeScore, score.awayScore + 1);
 });
 
 btnEndGame.addEventListener("click", () => {
-    
+
     btnNewGame.disabled = false;
     btnHomeGoal.disabled = true;
     btnAwayGoal.disabled = true;
@@ -43,5 +43,15 @@ btnEndGame.addEventListener("click", () => {
 
     gameCollection.buildGameList("gamesByDate");
     gameCollectionByScore.buildGameList("gamesByScore");
-    
+
+    let homeScore = document.getElementById("homeScore");
+    let awayScore = document.getElementById("awayScore");
+    let homeTeam = document.getElementById("homeTeam");
+    let awayTeam = document.getElementById("awayTeam");
+
+    homeScore.innerText = "Home Score";
+    awayScore.innerText = "Away Score";
+    homeTeam.innerText = "Home Team";
+    awayTeam.innerText = "Away Team";
+
 });
