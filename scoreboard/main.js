@@ -12,6 +12,7 @@ btnNewGame.addEventListener("click", () => {
     let newGame = new Game(0, 0);
     gameCollection.addGame(newGame);
     newGame.create();
+    btnNewGame.disabled = true;
     btnHomeGoal.disabled = false;
     btnAwayGoal.disabled = false;
     btnEndGame.disabled = false;
@@ -29,6 +30,7 @@ btnAwayGoal.addEventListener("click", () => {
 
 btnEndGame.addEventListener("click", () => {
     
+    btnNewGame.disabled = true;
     btnHomeGoal.disabled = true;
     btnAwayGoal.disabled = true;
     btnEndGame.disabled = true;

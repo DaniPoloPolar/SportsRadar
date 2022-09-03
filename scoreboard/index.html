@@ -9,16 +9,27 @@
             font-size: 5rem;
             margin: 1rem;
         }
+
         #actions button {
             margin: 1rem;
         }
+
         #teamNames p {
             margin: 1.5rem;
             font-size: 3rem;
         }
+
+        #lists {
+            margin: 0;
+        }
+
+        #lists ul {
+            margin: 5rem;
+        }
     </style>
     <script type="module" src="main.js"></script>
 </head>
+
 <body>
     <div id="scoreBoard">
         <b id="homeScore">Home Score</b>
@@ -31,15 +42,19 @@
     </div>
     <div id="actions">
         <button id="newGame">New Game</button>
-        <button id="homeGoal">Home Team Goal</button>
-        <button id="awayGoal">Visitor Team Goal</button>
-        <button id="endGame">End Game</button>
+        <button id="homeGoal" disabled>Home Team Goal</button>
+        <button id="awayGoal" disabled>Visitor Team Goal</button>
+        <button id="endGame" disabled>End Game</button>
     </div>
-    <div width="50%">
-        <ul id="gamesByDate"></ul>
-    </div>
-    <div width ="50%">
-        <ul id="gamesByScore"></ul>
+    <div id="lists">
+        <div>
+            <p>Games By Date</p>
+            <ul id="gamesByDate"></ul>
+        </div>
+        <div>
+            <p>Games By Total Score</p>
+            <ul id="gamesByScore"></ul>
+        </div>
     </div>
 </body>
 
