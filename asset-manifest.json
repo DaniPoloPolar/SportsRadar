@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SportsRadar/scoreboard/static/css/main.9cb9381f.css",
+    "main.js": "/SportsRadar/scoreboard/static/js/main.266f7429.js",
+    "index.html": "/SportsRadar/scoreboard/index.html",
+    "main.9cb9381f.css.map": "/SportsRadar/scoreboard/static/css/main.9cb9381f.css.map",
+    "main.266f7429.js.map": "/SportsRadar/scoreboard/static/js/main.266f7429.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9cb9381f.css",
+    "static/js/main.266f7429.js"
+  ]
+}
