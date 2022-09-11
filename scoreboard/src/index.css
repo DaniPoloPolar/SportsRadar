@@ -1,0 +1,17 @@
+#scoreBoard b {
+  font-size: 5rem;
+  margin: 1rem;
+}
+#actions button {
+  margin: 1rem;
+}
+#teamNames p {
+  margin: 1.5rem;
+  font-size: 3rem;
+}
+#lists, #teamNames {
+  display: flex;
+}
+#lists div {
+  width: 45%;
+}
