@@ -6,4 +6,4 @@ Football World Cup Score Board Technical Test
 - Finish a game via the <b>'End Game'</b> button
 - When a game is finished, it will be added to the game collections.
 - Two game collections will be shown. One ordered by date of game (newest to oldest) and one ordered by total score (highest to lowest).
-- Test functionality --> (<a href="https://danipolopolar.github.io/SportsRadar/scoreboard/">Try Online</a>)
+- Test functionality --> (<a href="https://danipolopolar.github.io/SportsRadar/">Try Online</a>)
