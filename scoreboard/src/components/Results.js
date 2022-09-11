@@ -1,3 +1,13 @@
+/**
+ * Creates lists of completed games and renders them
+ * 
+ * @version 1.0
+ * @author [Daniel Polo Villegas](https://github.com/DaniPoloPolar/)
+ * @param {Object} props - Contains two lists of completed games
+ * @param {Object[]} props.resultsByDate - Contains games added to the system ordered from newest to oldest
+ * @param {Object[]} props.resultsByScore - Contains games added to the system ordered from highest total score to lowest
+ * @returns - HTML containing the two lists of completed games
+ */
 function Results(props) {
     return (
         <div id="lists">
